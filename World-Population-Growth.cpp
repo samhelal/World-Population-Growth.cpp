@@ -14,9 +14,9 @@ using the simplifying assumption that the current growth rate will stay constant
 using namespace std ;
 
 int main(){
-    int counter(1) , year(75) , increase(0) , total(0) , worldPopulation(100000000) ;
-    double rate(1.05) ;
-    increase = (worldPopulation/100) *  rate ;
+    int counter(1) , year(75) , increase(0) , total(0) , worldPopulation(100000000) ; //assume worled population is 100 million 
+    double rate(1.05) ; 
+    increase = (worldPopulation/100) *  rate ; 
     total = worldPopulation + increase ;
 
     cout << "\n\tYear\tworldPopulation\tincreasing\t\n" << endl ;
@@ -24,8 +24,6 @@ int main(){
 
 
     while(counter<=year){
-
-        double nowWorldPopulation(0);
         
         increase = (total/100) *  rate ;
         total = total + increase ;
@@ -34,7 +32,7 @@ int main(){
             cout << "\t"<<counter<<"\t"<<total<<"\t"<<increase<<"\t" << endl ;
 
         }
-        if(total>worldPopulation*2){
+        if(total>=worldPopulation*2){
             if(total<(worldPopulation*2)+increase){
 
                 cout <<"\t"<<counter<<"\t"<<total<<"\t"<<increase
